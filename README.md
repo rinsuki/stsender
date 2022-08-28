@@ -13,6 +13,7 @@ libcomposite で作成した偽の USB-DAC の音を、ゲームに支障がな�
   * Raspberry Pi Zero 無印 は GPIO でがんばるとできるかも？
   * Raspberry Pi 4 は Ethernet ポートがあるので安定すると思います
     * が、電源供給がネックかも？
+  * まあ別に libcomposite が使えればそもそも Raspberry Pi でなくてもいいと思います
 * これ
 
 ## 想定
