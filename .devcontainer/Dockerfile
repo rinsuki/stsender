@@ -5,7 +5,8 @@ ARG VARIANT="buster"
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 
 # ** [Optional] Uncomment this section to install additional packages. **
-RUN apt-get update && \
+RUN dpkg --add-architecture armel && \
+    apt-get update && \
     export DEBIAN_FRONTEND=noninteractive && \
-    apt-get -y install --no-install-recommends make libasound2-dev gcc-arm-linux-gnueabi libc6-dev-armel-cross && \
+    apt-get -y install --no-install-recommends make libasound2-dev:armel gcc-arm-linux-gnueabi libc6-dev-armel-cross && \
     rm -rf /var/lib/apt/lists/*
