@@ -17,6 +17,7 @@ libcomposite で作成した偽の USB-DAC の音を、ゲームに支障がな�
 
 ## 想定
 
+```
 ボイスチャット (Discordなど)
 ↓ (Internet)
 (PC w/ 受信プログラム) → ヘッドセット → あなた
@@ -26,6 +27,7 @@ libcomposite で作成した偽の USB-DAC の音を、ゲームに支障がな�
 (Raspberry Pi w/ stsender) ← 電源供給
 ↑ USB
 ゲーム機 (Nintendo Switch など)
+```
 
 ## TODO
 
