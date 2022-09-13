@@ -14,6 +14,8 @@
 #define BUFFER_SIZE (BYTES_PER_SEC / 1000) * BUFFER_MSEC
 
 int main(int argc, char *argv[]) {
+    signal(SIGPIPE, SIG_IGN);
+
     if (argc < 2) {
         if (argc < 1) return 2;
         printf("Usage: %s <alsa device name>\n", argv[0]);
@@ -67,7 +69,7 @@ int main(int argc, char *argv[]) {
         }
         
         if (pid != 0) {
-            while (wait(NULL) != 0);
+            waitpid(pid, NULL, 0);
             continue;
         }
 
